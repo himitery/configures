@@ -1,0 +1,46 @@
+{
+  "terminal.integrated.fontFamily": "'SourceCodePro+Powerline+Awesome Regular'",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Ocean High Contrast",
+  "dateTime.showDayOfMonth": true,
+  "dateTime.showMonth": true,
+  "dateTime.customFormat": "YY-MM-DD  HH:mm",
+  "editor.formatOnSave": true,
+  "python.pythonPath": "/usr/bin/python3",
+  "python.languageServer": "Pylance",
+  "python.formatting.provider": "black",
+  "html.format.enable": false,
+  "cSpell.enabled": true,
+  "C_Cpp.updateChannel": "Insiders",
+  "C_Cpp.clang_format_style": "{ IndentWidth: 4, ColumnLimit: 80 }",
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "files.associations": {
+    "*.rmd": "markdown"
+  },
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[cpp]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+  },
+  "code-runner.runInTerminal": true,
+}
