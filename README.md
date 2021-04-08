@@ -1,9 +1,3 @@
 # Configure Files
 
----
-
-### List
-
-- neovim
-
----
+- [neovim](https://github.com/himitery/configures/tree/master/neovim)
