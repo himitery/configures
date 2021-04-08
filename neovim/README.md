@@ -1,22 +1,78 @@
-# NeoVim
+# NeoVim Configure
 
-### 1. Install vim-plug
+## ⚙️ Manually
 
-Link for Install [vim-plug]("https://github.com/junegunn/vim-plug")
+### 1. Install node
 
----
+- Ubuntu
 
-### 2. touch init.vim
+```bash
+sudo apt install nodejs -y
+```
+
+- Mac
+
+```bash
+brew install node
+```
+
+### 2. Install neovim
+
+- Ubuntu
+
+```bash
+sudo apt install neovim -y
+```
+
+- Mac
+
+```bash
+brew install neovim
+```
+
+### 3. Install vim-plug
+
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+### 4. touch init.vim
 
 ```
 mkdir -p ~/.config/nvim
 touch ~/.config/nvim/init.vim
 ```
 
+### 5. Set init.vim
+
+```bash
+git clone https://github.com/himitery/configures.git
+cd ./configures/neovim
+```
+
+```bash
+cat ./init.vim >> ~/.config/neovim/init.vim
+```
+
 ---
 
-### 3. Set init.vim
+## ⚙️ Use Shell Script
 
-Get [configure file]("https://github.com/himitery/configures/blob/master/neovim/init.vim") for neovim
+```bash
+git clone https://github.com/himitery/configures.git
+cd ./configures/neovim
+```
+
+- Ubuntu
+
+```bash
+./set_neovim.sh Ubuntu
+```
+
+- Mac
+
+```bash
+./set_neovim.sh Mac
+```
 
 ---
