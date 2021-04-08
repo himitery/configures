@@ -4,7 +4,7 @@ OS=${1}
 UBUNTU="Ubuntu"
 MAC="Mac"
 
-if [ "${OS}" = "${UBUNTU}" ] ; then
+{if [ "${OS}" = "${UBUNTU}" ] ; then
     echo "Install neovim for Ubuntu"
     
     sudo apt update
@@ -36,4 +36,6 @@ mkdir -p ~/.config/nvim
 touch ~/.config/nvim/init.vim
 
 cat ./init.vim > ~/.config/nvim/init.vim
-nvim +PlugInstall
+nvim +PlugInstall} || {
+    echo "Failed"
+}
