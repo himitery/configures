@@ -6,8 +6,9 @@ MAC="Mac"
 
 {if [ "${OS}" = "${UBUNTU}" ] ; then
     echo "Install neovim for Ubuntu"
-    
+
     sudo apt update
+    sudo apt install curl
     sudo apt install nodejs -y
     sudo apt install neovim -y
 
@@ -15,6 +16,7 @@ elif [ "${OS}" = "${MAC}" ] ; then
     echo "Install neovim for Mac"
 
     brew update
+    brew install curl
     brew install node
     brew install neovim
 
