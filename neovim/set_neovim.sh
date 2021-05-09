@@ -33,6 +33,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 echo "alias vi=\"nvim\"" >> ~/.zshrc
 echo "alias vim=\"vim\"" >> ~/.zshrc
+source ~/.zshrc
 
 mkdir -p ~/.config/nvim
 touch ~/.config/nvim/init.vim
