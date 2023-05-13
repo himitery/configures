@@ -1,25 +1,35 @@
-"Plug list
 call plug#begin()
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 " airline
 Plug 'vim-airline/vim-airline'     " vim status bar
+
 " git
 Plug 'airblade/vim-gitgutter'      " git change status
 Plug 'tpope/vim-fugitive'          " vim git wrapper
+
 " tree
 Plug 'scrooloose/nerdtree'         " tree plugin for vim
 Plug 'Xuyuanp/nerdtree-git-plugin' " nerd tree git plugin
+
 " search
 Plug 'ctrlpvim/ctrlp.vim'          " ctrl p search
+
 " auto pair
 Plug 'jiangmiao/auto-pairs'        " pairs quotes or braket
+
 " dev icon
 Plug 'ryanoasis/vim-devicons'      " dev icons for vim
+
 " tagbar
 Plug 'majutsushi/tagbar'           " browse tag plugin
+
 " ale linter
 Plug 'w0rp/ale'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " javascript
 Plug 'pangloss/vim-javascript'
@@ -44,15 +54,17 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'tpope/vim-surround'
 
 " vim theme
-Plug 'mhartington/oceanic-next'
+Plug 'navarasu/onedark.nvim'
 
+" google
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-call plug#end()
+" wakatime
+Plug 'wakatime/vim-wakatime'
 
-autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+call plug#end()
 
 " Vim Config
 set number
@@ -68,8 +80,8 @@ set expandtab
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-"" Ctrl+n NERD Tree Toggle
-map <C-t> :NERDTreeToggle<CR>
+"" Command+K NERD Tree Toggle
+map <C-k> :NERDTreeToggle<CR>
 
 " hidden file show tree
 let NERDTreeShowHidden=1
@@ -83,24 +95,16 @@ let g:ctrlp_custom_ignore = {
 
 set encoding=UTF-8
 
-"" easir window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
 "" Indentation rules
 augroup vimrc-javascript
   autocmd!
-  autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType vue set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType jsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType tsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType less set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
-  autocmd FileType scss set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
   autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
   autocmd FileType css set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType typescript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType jsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType tsx set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2 smartindent
+  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
 augroup END
 
 "" Git
@@ -148,6 +152,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Theme
 syntax enable
-colorscheme OceanicNext
-
-let g:airline_theme='oceanicnext'
+let g:onedark_config = {
+    \ 'style': 'deep',
+\}
+colorscheme onedark
